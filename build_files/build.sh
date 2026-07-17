@@ -13,7 +13,84 @@ cp -avf "/ctx/system_files"/. /
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux
+FEDORA_PACKAGES=(
+    adcli
+    adw-gtk3-theme
+    adwaita-fonts-all
+    autofs
+    bash-color-prompt
+    bcache-tools
+    bootc
+    borgbackup
+    containerd
+    cryfs
+    davfs2
+    ddcutil
+    evtest
+    fastfetch
+    firewall-config
+    fish
+    foo2zjs
+    fuse-encfs
+    gcc
+    gcc-c++
+    git-credential-libsecret
+    glow
+    gum
+    hplip
+    ibus-mozc
+    ifuse
+    igt-gpu-tools
+    input-remapper
+    iwd
+    jetbrains-mono-fonts-all
+    just
+    krb5-workstation
+    libappindicator-gtk3
+    libayatana-appindicator-gtk3
+    libgda
+    libgda-sqlite
+    libimobiledevice
+    libratbag-ratbagd
+    libxcrypt-compat
+    lm_sensors
+    make
+    mesa-libGLU
+    mozc
+    oddjob-mkhomedir
+    opendyslexic-fonts
+    openssh-askpass
+    powerstat
+    powertop
+    printer-driver-brlaser
+    pulseaudio-utils
+    python3-pip
+    python3-pygit2
+    rclone
+    restic
+    samba
+    samba-dcerpc
+    samba-ldb-ldap-modules
+    samba-winbind-clients
+    samba-winbind-modules
+    setools-console
+    sssd-nfs-idmap
+    switcheroo-control
+    tmux
+    usbip
+    usbmuxd
+    waypipe
+    wireguard-tools
+    wl-clipboard
+    xdg-terminal-exec
+    xprop
+    zenity
+    zsh
+)
+
+# Install all Fedora packages (bulk - safe from COPR injection)
+echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
+dnf -y install "${FEDORA_PACKAGES[@]}"
 
 dnf5 remove -y gnome-software firefox htop nvtop ptyxis
 
@@ -46,4 +123,3 @@ dnf5 remove -y gnome-software firefox htop nvtop ptyxis
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable flatpak-preinstall.service
