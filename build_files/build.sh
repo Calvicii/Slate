@@ -41,7 +41,6 @@ FEDORA_PACKAGES=(
     ibus-mozc
     ifuse
     igt-gpu-tools
-    input-remapper
     iwd
     jetbrains-mono-fonts-all
     just
