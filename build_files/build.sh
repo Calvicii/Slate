@@ -102,7 +102,7 @@ REMOVED_PACKAGES=(
 	gnome-shell-extension-apps-menu
 	gnome-shell-extension-background-logo
 	gnome-shell-extension-launch-new-instance
-	gnome-shell-extension-workspace-indicator
+	gnome-shell-extension-places-menu
 	gnome-shell-extension-window-list
 )
 
