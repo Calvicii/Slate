@@ -92,7 +92,7 @@ FEDORA_PACKAGES=(
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
 dnf -y install "${FEDORA_PACKAGES[@]}"
 
-dnf5 remove -y gnome-software firefox htop nvtop ptyxis
+dnf5 remove -y gnome-software firefox htop nvtop ptyxis gnome-tour yelp
 
 # flatpak install -y flathub \
 # 	org.gnome.Epiphany \
