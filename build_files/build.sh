@@ -109,25 +109,6 @@ REMOVED_PACKAGES=(
 echo "Removing ${#REMOVED_PACKAGES[@]} packages from Fedora repos..."
 dnf -y remove "${REMOVED_PACKAGES[@]}"
 
-# flatpak install -y flathub \
-# 	org.gnome.Epiphany \
-# 	app.devsuite.Ptyxis \
-# 	io.github.kolunmi.Bazaar \
-# 	io.missioncenter.MissionCenter \
-# 	com.mattjakeman.ExtensionManager \
-# 	org.gnome.Calendar \
-# 	org.gnome.Contacts \
-# 	org.gnome.clocks \
-# 	org.gnome.Weather \
-# 	org.gnome.Snapshot \
-# 	org.gnome.Maps \
-# 	org.gnome.Calculator \
-# 	org.gnome.Loupe \
-# 	org.gnome.Showtime \
-# 	org.gnome.Decibels \
-# 	org.gnome.Papers \
-# 	page.tesk.Refine
-
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
