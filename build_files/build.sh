@@ -91,7 +91,23 @@ FEDORA_PACKAGES=(
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
 dnf -y install "${FEDORA_PACKAGES[@]}"
 
-dnf5 remove -y gnome-software firefox htop nvtop ptyxis gnome-tour yelp
+REMOVED_PACKAGES=(
+	gnome-software
+	firefox
+	htop
+	nvtop
+	ptyxis
+	gnome-tour
+	yelp
+	gnome-shell-extension-apps-menu
+	gnome-shell-extension-background-logo
+	gnome-shell-extension-launch-new-instance
+	gnome-shell-extension-workspace-indicator
+	gnome-shell-extension-window-list
+)
+
+echo "Removing ${#REMOVED_PACKAGES[@]} packages from Fedora repos..."
+dnf -y remove "${REMOVED_PACKAGES[@]}"
 
 # flatpak install -y flathub \
 # 	org.gnome.Epiphany \
