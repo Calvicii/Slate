@@ -104,6 +104,8 @@ REMOVED_PACKAGES=(
 	gnome-shell-extension-launch-new-instance
 	gnome-shell-extension-places-menu
 	gnome-shell-extension-window-list
+    gnome-system-monitor
+    firewall-config
 )
 
 echo "Removing ${#REMOVED_PACKAGES[@]} packages from Fedora repos..."
